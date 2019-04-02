@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block js_add%} 
+	<script>
+        var data = {{data|tojson}}
+        var item_id = {{item_id}}
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'item.js') }}"></script> 
+
+
+{% endblock %}
+
+{% block placeholder %}
+	<div class="container">
+		<div class="jumpbotron">
+			<h1> Movie Details </h1>
+		</div>
+		<div id="item">
+		</div>
+
+	</div>
+{% endblock %}
+

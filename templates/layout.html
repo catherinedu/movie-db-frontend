@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head%}
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      {% block js_add%}
+      {% endblock%}
+
+      <style> 
+          ul.list{
+            display: table
+          } 
+          ul.list > li{
+            display: table-cell;
+          }
+          
+      </style>
+
+    {% endblock %}
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          <ul class="nav navbar-nav list">
+            <li><a class="navbar-brand" >2010's Action Movie Database</a></li>
+            <li><a class="navbar-brand" href="/Add_item">Add Item</a></li>
+            <li><a class="navbar-brand" href="/search">Search</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    {% block placeholder%}
+    {% endblock%}
+    
+  </body>
+
+
+</html>

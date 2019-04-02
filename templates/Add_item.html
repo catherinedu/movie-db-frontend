@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block js_add%}
+	<script type="text/javascript" src="{{ url_for('static', filename = 'add_item.js') }}"></script> 
+    <script>
+        var data = {{data|tojson}}
+    </script>
+
+{% endblock %}
+
+{% block placeholder %}
+	<div class="container">
+		<div class="jumpbotron">
+			<h1> Add Item </h1>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-2">
+				<div class="ui-widget">
+					<input type="text" id="enter_title" placeholder="Title">
+				</div>
+				<div class="ui-widget">
+					<input type="text" id="enter_year" placeholder="Year">
+				</div>
+				<div class="ui-widget">
+					<input type="text" id="enter_image_link" placeholder="Image Link">
+				</div>
+				<div class="ui-widget">
+					<input type="text" id="enter_summary" placeholder="Summary">
+				</div>
+				<div class="ui-widget">
+					<input type="text" id="enter_director" placeholder="Director">
+				</div>
+				<div class="ui-widget">
+					<input type="text" id="enter_budget" placeholder="Budget">
+				</div>
+				<div class="ui-widget">
+					<input type="text" id="enter_runtime" placeholder="Runtime">
+				</div>
+				<div class="ui-widget">
+					<input type="text" id="enter_score" placeholder="Score">
+				</div>
+				<div class="ui-widget">
+					<input type="text" id="enter_MPAA" placeholder="MPAA">
+				</div>
+
+				<button class="btn btn-primary" id="submit_item">Add</button>
+			</div>
+			
+		</div>
+		<br>
+
+		<div id="display">
+		</div>
+
+		
+
+ 
+{% endblock %}
